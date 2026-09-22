@@ -24,6 +24,10 @@ Glen Conroy, ICT Operations Manager at Dorset
 
 > *"People only notice an IMS when it's not working. Either payments get taken or they don't, so our aim is to make the application as easy to use as possible and ensure it does what it needs to do."*
 
+Sam Clark, Service Director of Information and Technology at Newcastle-under-Lyme
+
+> *"It's been a pleasure to work with Tailwind Digital throughout our implementation of Local Gov IMS. They have been a fantastic partner, helping us deliver a modern income management platform that makes it easier for residents to pay for council services while giving our teams greater flexibility, control, and efficiency behind the scenes. The solution has delivered exactly what we set out to achieve and provides a strong foundation for future service improvements."*
+
 ## Partners
 
 The current partners on the project are:
@@ -48,6 +52,11 @@ The current partners on the project are:
         <div class="c-partner-card__role">Managed Service Provider</div>
         <div class="c-partner-card__name">Tailwind Digital</div>
         <p>Provides fully managed implementation, hosting, and support for councils adopting Local Gov IMS. <a href="https://tailwinddigital.io" target="_blank" rel="noopener">tailwinddigital.io ↗</a></p>
+    </div>
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Partner Council</div>
+        <div class="c-partner-card__name">Newcastle-under-Lyme Borough Council</div>
+        <p>Adopted Local Gov IMS in 2026 with the support of managed service provider Tailwind Digital.</p>
     </div>
     <div class="c-partner-card">
         <div class="c-partner-card__role">Partner Council</div>
