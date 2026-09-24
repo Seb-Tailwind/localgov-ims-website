@@ -10,11 +10,11 @@ navTitle: Community
 
 ## Our story
 
-In 2017, Barnsley Metropolitan Borough Council built their own in-house income management system. Barnsley had identified an opportunity to build this system to meet the real needs of their staff and council. Thier own IMS gave them greater control, improved user experiences, and lowered running costs compared with proprietary alternatives.
+In 2017, Barnsley Metropolitan Borough Council built their own in-house income management system. Barnsley had identified an opportunity to build this system to meet the real needs of their staff and council. Their own IMS gave them greater control, improved user experiences, and lowered running costs compared with proprietary alternatives.
 
 Recognising the IMS could be valuable to other councils, Barnsley's work became a [DLUHC Local Digital Fund](https://www.localdigital.gov.uk/funded-project/income-management-system/) project. A shared vision emerged: for local government teams to build their own IMS together, in the open.
 
-The project followed agile delivery methods, starting discovery in 2019. Dorset and Huntingdonshire councils joined from the alpha phase. Alpha proved the viability of the IMS, and the team continued into beta in summer 2021. Lewisham joined the team, and the partnership continues to grow.
+The project followed agile delivery methods, starting discovery in 2019. Dorset and Huntingdonshire councils joined from the alpha phase. Alpha proved the viability of Local Gov IMS, and the team continued into beta. Following on from that since the end of Local Digital funding, two new councils, Burnley and Newcastle-Under-Lyme have gone live with Local Gov IMS with the support of managed service provider Tailwind Digital.
 
 Richard Kingston, Former Digital Programme Manager at Barnsley
 
@@ -23,6 +23,10 @@ Richard Kingston, Former Digital Programme Manager at Barnsley
 Glen Conroy, ICT Operations Manager at Dorset
 
 > *"People only notice an IMS when it's not working. Either payments get taken or they don't, so our aim is to make the application as easy to use as possible and ensure it does what it needs to do."*
+
+Sam Clark, Service Director of Information and Technology at Newcastle-under-Lyme Borough Council
+
+> *"It's been a pleasure to work with Tailwind Digital throughout our implementation of Local Gov IMS. They have been a fantastic partner, helping us deliver a modern income management platform that makes it easier for residents to pay for council services while giving our teams greater flexibility, control, and efficiency behind the scenes. The solution has delivered exactly what we set out to achieve and provides a strong foundation for future service improvements."*
 
 ## Partners
 
@@ -48,6 +52,11 @@ The current partners on the project are:
         <div class="c-partner-card__role">Managed Service Provider</div>
         <div class="c-partner-card__name">Tailwind Digital</div>
         <p>Provides fully managed implementation, hosting, and support for councils adopting Local Gov IMS. <a href="https://tailwinddigital.io" target="_blank" rel="noopener">tailwinddigital.io ↗</a></p>
+    </div>
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Partner Council</div>
+        <div class="c-partner-card__name">Newcastle-under-Lyme Borough Council</div>
+        <p>Adopted Local Gov IMS in 2026 with the support of managed service provider Tailwind Digital.</p>
     </div>
     <div class="c-partner-card">
         <div class="c-partner-card__role">Partner Council</div>

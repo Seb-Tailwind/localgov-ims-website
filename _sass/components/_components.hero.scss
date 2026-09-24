@@ -188,6 +188,11 @@
     opacity: 1;
 }
 
+.c-partner-banner__logo--newcastle:hover {
+    filter: brightness(0) saturate(100%) invert(19%) sepia(60%) saturate(1000%) hue-rotate(201deg) brightness(90%) contrast(95%);
+    opacity: 1;
+}
+
 .c-partner-banner__logo--provider {
     filter: grayscale(0%);
     opacity: 1;
