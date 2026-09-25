@@ -1,6 +1,8 @@
 ---
-layout: section    # See _layouts/section.html
+layout: page
 title: Our story and community
+subtitle: An open, collaborative project, built by the councils who use it, for the councils who need it.
+eyebrow: Community
 theme: community
 navEntry: 5
 navTitle: Community
@@ -8,30 +10,85 @@ navTitle: Community
 
 ## Our story
 
-In 2017 Barnsley Metropolitan Borough Council built their own in-house income management system. Barnsley had identified an opportunity to build this system, meeting the needs of people who use the system, and of the council. By building the IMS themselves Barnsely gained greater control over the system, improved experiences for users and lowered running costs. Barnsley have been using their IMS since building it. 
+In 2017, Barnsley Metropolitan Borough Council built their own in-house income management system. Barnsley had identified an opportunity to build this system to meet the real needs of their staff and council. Their own IMS gave them greater control, improved user experiences, and lowered running costs compared with proprietary alternatives.
 
-Barnsley recognised that the IMS they’d built could be valuable to other councils, which led to the council’s work becoming a [DLUHC funded project](https://www.localdigital.gov.uk/funded-project/income-management-system/), and a collaborative effort with other councils. A shared vision was identified - for local government teams to build their own IMS in collaboration.
+Recognising the IMS could be valuable to other councils, Barnsley's work became a [DLUHC Local Digital Fund](https://www.localdigital.gov.uk/funded-project/income-management-system/) project. A shared vision emerged: for local government teams to build their own IMS together, in the open.
 
-The IMS project team follows [agile delivery methods](https://www.gov.uk/service-manual/agile-delivery), and started a discovery phase in 2019. Discovery explored the appetite amongst councils for a shared IMS for local government. Engaging other council’s in the discovery showed there was appetite, but also that moving IMS can be complicated and not all councils have the in-house technical capability that's needed to do this. 
+The project followed agile delivery methods, starting discovery in 2019. Dorset and Huntingdonshire councils joined from the alpha phase. Alpha proved the viability of Local Gov IMS, and the team continued into beta. Following on from that since the end of Local Digital funding, two new councils, Burnley and Newcastle-Under-Lyme have gone live with Local Gov IMS with the support of managed service provider Tailwind Digital.
 
-Richard Kingston, Digital Programme Manager at Barnsley
+Richard Kingston, Former Digital Programme Manager at Barnsley
 
-> *“We initially created the system for our use at Barnsley, but to make this IMS something that other councils can use, we decided to build in other functionality too with the goal of making it open source. That way, we have an IMS that has been created by local government, for local government. We hope this is an approach that others can follow with different services”.*
-
-Dorset and Huntingdonshire councils joined the project from the alpha phase. Since starting the alpha phase the partner councils have re-designed and re-built Barnsley’s original IMS, creating a new version of the IMS that will work well for other councils. Alpha proved the viability of the IMS, and the team continued on to beta in summer 2021.
+> *"We initially created the system for our use at Barnsley, but to make this IMS something that other councils can use, we decided to build in other functionality too with the goal of making it open source. That way, we have an IMS that has been created by local government, for local government."*
 
 Glen Conroy, ICT Operations Manager at Dorset
 
-> *“People only notice an IMS when it’s not working. Either payments get taken or they don’t, so our aim is to make the application as easy to use as possible and ensure it does what it needs to do.”*
+> *"People only notice an IMS when it's not working. Either payments get taken or they don't, so our aim is to make the application as easy to use as possible and ensure it does what it needs to do."*
 
-The beta is currently underway, and is being approached in two parts. The first part of beta focused on the delivery of an open source version of the IMS. The second part of the beta phase, to start in late summer 2022 will focus on designing a supported version of the IMS.
+Sam Clark, Service Director of Information and Technology at Newcastle-under-Lyme Borough Council
 
-Lewisham joined the team recently, and due to staff changes Huntingdonshire left the project. Throughout the project we’ve continued to engage other councils, working in the open and sharing our progress. The team encourages other councils to join the project team and IMS community.
+> *"It's been a pleasure to work with Tailwind Digital throughout our implementation of Local Gov IMS. They have been a fantastic partner, helping us deliver a modern income management platform that makes it easier for residents to pay for council services while giving our teams greater flexibility, control, and efficiency behind the scenes. The solution has delivered exactly what we set out to achieve and provides a strong foundation for future service improvements."*
 
-## The IMS Community
+## Partners
 
-This is an open, collaborative, local government project. It’s been funded by the Department for Levelling Up, Housing, and Communities’ (DLUHC) Local Digital Fund, and led collaboratively by partners.
+The current partners on the project are:
 
-The current partners on the project are Dorset Council, Barnsley Metropolitan Borough Council and Lewisham Council. 
+<div class="c-three-col">
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Partner Council</div>
+        <div class="c-partner-card__name">Dorset Council</div>
+        <p>Lead partner on the IMS project and community. Glen Conroy leads IMS community engagement from Dorset.</p>
+    </div>
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Partner Council</div>
+        <div class="c-partner-card__name">Barnsley MBC</div>
+        <p>The originating council. Built the first IMS in 2017 and drove the open source IMS vision for local government.</p>
+    </div>
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Partner Council</div>
+        <div class="c-partner-card__name">Burnley Council</div>
+        <p>Adopted Local Gov IMS in 2026 with the support of managed service provider Tailwind Digital.</p>
+    </div>
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Managed Service Provider</div>
+        <div class="c-partner-card__name">Tailwind Digital</div>
+        <p>Provides fully managed implementation, hosting, and support for councils adopting Local Gov IMS. <a href="https://tailwinddigital.io" target="_blank" rel="noopener">tailwinddigital.io ↗</a></p>
+    </div>
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Partner Council</div>
+        <div class="c-partner-card__name">Newcastle-under-Lyme Borough Council</div>
+        <p>Adopted Local Gov IMS in 2026 with the support of managed service provider Tailwind Digital.</p>
+    </div>
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Partner Council</div>
+        <div class="c-partner-card__name">Gravesham Borough Council</div>
+        <p>Supported the project team through a proof of concept in 2025, providing useful feedback on new features.</p>
+    </div>
+    <div class="c-partner-card c-partner-card--dashed">
+        <div class="c-partner-card__role">Future partners</div>
+        <div class="c-partner-card__name">Could be your council</div>
+        <p>The community is open. <a href="{{ '/contacts' | relative_url }}">Get in touch</a> to find out how to get involved.</p>
+    </div>
+</div>
 
-The partners are supported by a delivery partner, dxw and a DLUHC Engagement and Collaboration Manager.
+<p class="c-section-intro">Project partners from the Local Digital Funded project stages:</p>
+<div class="c-three-col">
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Former Delivery Partner</div>
+        <div class="c-partner-card__name">dxw</div>
+        <p class="partner-desc">Supported the project team as delivery partner throughout beta development.</p>
+    </div>
+    <div class="c-partner-card">
+        <div class="c-partner-card__role">Early Partner Council</div>
+        <div class="c-partner-card__name">Huntingdonshire DC</div>
+        <p class="partner-desc">Joined from the alpha phase and contributed to early development of the system.</p>
+    </div>
+    <div class="c-partner-card c-partner-card">
+        <div class="c-partner-card__role">Early Partner Council</div>
+        <div class="c-partner-card__name">Lewisham Council</div>
+        <p class="partner-desc">Joined the project team during beta, contributing to development and testing of the system.</p>
+    </div>
+</div>
+<div class="c-callout c-callout--amber" style="margin-top: 2rem;">
+    <div class="c-callout__label">Join the community</div>
+    <p>The IMS community is open to all councils. Attend Show and Share sessions and help shape the direction of the project. <a href="{{ '/contacts' | relative_url }}">Get in touch to find out more →</a></p>
+</div>

@@ -1,57 +1,241 @@
+﻿/* ==========================================================================
+   COMPONENT: HERO
+   Supports both homepage (max) and inner page (min) modes
+   Teal/coral themed via $themes map
+   ========================================================================== */
+.c-page-header {
+    display: block;
+    width: 100%;
+}
 .c-hero {
-    background-image: url('/assets/images/hero-bg.jpg');
-    background-position: top left;
-    background-repeat: repeat;
+    padding: 3.5rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
 }
 
+/* Subtle radial glow overlay */
+.c-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.07) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.c-hero__inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Eyebrow label — small uppercase tag above title */
+.c-hero__eyebrow {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.95);
+    font-family: $font-family-sans;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+/* Title — min mode (inner pages) */
 .c-hero__title--min {
-    font-size: 10vw;
-    line-height: calc(max(16vw, 4rem));
-    margin: 0;
+    font-family: $font-family-serif;
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin: 0 0 0.75rem 0;
+    max-width: 640px;
 }
 
-.c-hero__subtitle--min {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
+/* Title — max mode (homepage) */
 .c-hero__title--max {
-    font-size: 10vw;
-    line-height: calc(max(16vw, 4rem));
+    font-family: $font-family-serif;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    max-width: 680px;
+}
+
+/* Subtitle */
+.c-hero__subtitle--min {
+    font-family: $font-family-sans;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.7;
     margin: 0;
-    word-spacing: map-get($containers, "content"); // Forces each work onto it's own line
+    max-width: 520px;
 }
 
 .c-hero__subtitle--max {
-    font-size: 1.5rem;
-    margin-bottom: 0;
-    margin-top: 4rem;
+    font-family: $font-family-sans;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.75;
+    margin: 0 0 2.25rem 0;
+    max-width: 540px;
+}
+
+/* CTA buttons */
+.c-hero__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.c-hero__btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #ffffff;
+    color: map-get($colors, "teal");
+    text-decoration: none;
+    font-family: $font-family-sans;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+.c-hero__btn-primary:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    color: map-get($colors, "teal");
+}
+
+/* Coral-themed pages: primary button text is coral */
+@each $theme, $key in $themes {
+    .u-theme-primary--#{$theme} .c-hero__btn-primary {
+        color: map-deep-get($themes, #{$theme}, "primary");
+    }
+}
+
+.c-hero__btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.92);
+    border: 1px solid rgba(255,255,255,0.3);
+    text-decoration: none;
+    font-family: $font-family-sans;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.c-hero__btn-secondary:hover {
+    background: rgba(255,255,255,0.22);
+    color: rgba(255,255,255,0.92);
+}
+
+/* Partner banner — sits below hero on homepage */
+.c-partner-banner {
+    background: map-get($colors, "off-white");
+    border-bottom: 1px solid map-get($colors, "rule-warm");
+    padding: 1.25rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.c-partner-banner__label {
+    font-family: $font-family-sans;
+    font-size: 0.65rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: map-get($colors, "silver");
+    font-weight: 700;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.c-partner-banner__logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.c-partner-banner__logo {
+    height: 40px;
+    width: 130px;
+    object-fit: contain;
+    object-position: center;
+    filter: grayscale(100%);
+    opacity: 0.65;
+    transition: filter 0.2s, opacity 0.2s;
+}
+
+.c-partner-banner__logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.c-partner-banner__logo--newcastle:hover {
+    filter: brightness(0) saturate(100%) invert(19%) sepia(60%) saturate(1000%) hue-rotate(201deg) brightness(90%) contrast(95%);
+    opacity: 1;
+}
+
+.c-partner-banner__logo--provider {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+
+.c-partner-banner__separator {
+    width: 1px;
+    height: 32px;
+    background: map-get($colors, "rule");
+    flex-shrink: 0;
+}
+
+.c-partner-banner__funded {
+    margin-left: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.c-partner-banner__funded-badge {
+    background: map-get($colors, "teal");
+    border-radius: 6px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.c-partner-banner__funded-logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: map-get($breakpoints, "large")) {
+    .c-partner-banner__funded {
+        margin-left: 0;
+    }
 }
 
 @media screen and (min-width: map-get($breakpoints, "large")) {
-    
-    .c-hero__title--min {
-        font-size: 4rem;
-        line-height: calc(max(15vh, 4rem));
-    }
-    
-    .c-hero__subtitle--min {
-        font-size: 2rem;
-    }
-    
-    .c-hero__title--max {
-        font-size: 8vw;
-        line-height: calc(max(18vh, 7rem));
-    }
-
-    .c-hero__subtitle--max {
-        font-size: 2rem;
-    }
-}
-
-@media screen and (min-width: map-get($breakpoints, "gigantic")) {
-    .c-hero__title--max {
-        font-size: 9rem;
-        line-height: calc(max(21vh, 9rem));
+    .c-hero {
+        padding: 4.5rem 3rem 4rem;
     }
 }

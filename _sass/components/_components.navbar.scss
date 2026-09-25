@@ -1,21 +1,75 @@
+﻿/* ==========================================================================
+   COMPONENT: NAVBAR
+   ========================================================================== */
+
 .c-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 0 2rem;
+    height: 60px;
+    background: map-get($colors, "warm-white");
+    border-bottom: 2px solid map-get($colors, "rule-warm");
 }
 
 .c-navbar__brand {
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     text-decoration: none;
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: map-get($colors, "navy");
+    flex-shrink: 0;
 }
 
+.c-navbar__brand-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: map-get($colors, "coral");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.c-navbar__brand-mark svg {
+    width: 16px;
+    height: 16px;
+}
+
+.c-navbar__brand-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: map-get($colors, "navy");
+}
+
+.c-navbar__brand-text strong {
+    font-weight: 700;
+    color: map-get($colors, "navy");
+}
+
+/* Mobile menu toggle */
 .c-navbar__menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .5s cubic-bezier(0, 1, 0, 1);
-    width: 100%;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: map-get($colors, "warm-white");
+    border-bottom: 1px solid map-get($colors, "rule-warm");
+    z-index: 99;
+}
+
+.c-navbar__checkbox:checked ~ .c-navbar__menu {
+    display: block;
 }
 
 .c-navbar__menu-list {
@@ -23,31 +77,66 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem 0 1.5rem;
     margin: 0;
+    gap: 0.25rem;
 }
 
 .c-navbar__menu-item {
-    padding: 1rem 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.c-navbar__menu-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: map-get($colors, "slate");
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+}
+
+.c-navbar__menu-link:hover {
+    color: map-get($colors, "navy");
+    background: map-get($colors, "off-white");
+}
+
+.c-navbar__menu-link--active {
+    color: map-get($colors, "coral");
+    font-weight: 700;
 }
 
 .c-navbar__menu-button {
     display: inline-block;
-    padding: 0.6rem;
+    padding: 0.45rem 1rem;
     text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 6px;
+    background: map-get($colors, "coral");
+    color: map-get($colors, "white") !important;
+    transition: background 0.15s;
 }
 
-.c-navbar__checkbox, .c-navbar__toggle {
+.c-navbar__menu-button:hover {
+    background: map-get($colors, "coral-dark");
+    color: map-get($colors, "white");
+}
+
+/* Hamburger */
+.c-navbar__checkbox {
     display: none;
 }
 
 .c-navbar__toggle {
-    position: relative;
     display: inline-flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    top: -1px;
     cursor: pointer;
 }
 
@@ -56,93 +145,58 @@
     width: 20px;
 }
 
-.c-navbar__hamburger-bun::before, .c-navbar__hamburger-bun::after, .c-navbar__hamburger-meat::before, .c-navbar__hamburger-meat::after {
+.c-navbar__hamburger-bun::before,
+.c-navbar__hamburger-bun::after,
+.c-navbar__hamburger-meat::before,
+.c-navbar__hamburger-meat::after {
     content: '';
     position: absolute;
     width: inherit;
     height: 2px;
+    background: map-get($colors, "navy");
     transition: transform .5s;
 }
 
-.c-navbar__hamburger-bun::before {
-    transform: translateY(-7px);
-}
+.c-navbar__hamburger-bun::before { transform: translateY(-7px); }
+.c-navbar__hamburger-bun::after  { transform: translateY(7px); }
 
-.c-navbar__hamburger-bun::after {
-    transform: translateY(7px);
-}
-
-.c-navbar__hamburger-meat::before, .c-navbar__hamburger-meat::after {
+.c-navbar__hamburger-meat::before,
+.c-navbar__hamburger-meat::after {
     width: 10px;
     transition: transform .5s, opacity .5s;
-} 
-
-.c-navbar__hamburger-meat::after {
-    transform: translateX(10px);
 }
 
-.c-navbar__checkbox:checked ~ .c-navbar__menu {
-    max-height: 100vh;
-    transition: max-height .5s ease-in-out;
-}
+.c-navbar__hamburger-meat::after { transform: translateX(10px); }
 
-.c-navbar__checkbox:checked ~ .c-navbar__toggle>.c-navbar__hamburger-bun::before {
-    transform: rotate(45deg);
-}
+.c-navbar__checkbox:checked ~ .c-navbar__toggle > .c-navbar__hamburger-bun::before { transform: rotate(45deg); }
+.c-navbar__checkbox:checked ~ .c-navbar__toggle > .c-navbar__hamburger-bun::after  { transform: rotate(-45deg); }
+.c-navbar__checkbox:checked ~ .c-navbar__toggle > .c-navbar__hamburger-meat::before { transform: translateX(-10px); opacity: 0; }
+.c-navbar__checkbox:checked ~ .c-navbar__toggle > .c-navbar__hamburger-meat::after  { transform: translateX(20px); opacity: 0; }
 
-.c-navbar__checkbox:checked ~ .c-navbar__toggle>.c-navbar__hamburger-bun::after {
-    transform: rotate(-45deg);
-}
-
-.c-navbar__checkbox:checked ~ .c-navbar__toggle>.c-navbar__hamburger-meat::before {
-    transform: translateX(-10px);
-    opacity: 0;
-}
-
-.c-navbar__checkbox:checked ~ .c-navbar__toggle>.c-navbar__hamburger-meat::after {
-    transform: translateX(20px);
-    opacity: 0;
-}
-
-@each $theme, $key in $themes {
-
-    .c-navbar__menu-link--#{$theme} {
-        background-color: map-deep-get($themes, #{$theme}, "primary");
-        color: map-deep-get($themes, #{$theme}, "onPrimary");
-    }
-
-    .c-navbar__menu-button--#{$theme} {
-        background-color: map-deep-get($themes, #{$theme}, "onPrimary");
-        color: map-deep-get($themes, #{$theme}, "primary");
-    }
-
-    .c-navbar__hamburger-bun--#{$theme}::before, 
-    .c-navbar__hamburger-bun--#{$theme}::after, 
-    .c-navbar__hamburger-meat--#{$theme}::before, 
-    .c-navbar__hamburger-meat--#{$theme}::after {
-        background-color: map-deep-get($themes, #{$theme}, "onPrimary");
-    }
-
-}
-
+/* Desktop */
 @media screen and (min-width: map-get($breakpoints, "large")) {
-    
-    .c-navbar__brand {
-        display: none;
+
+    .c-navbar {
+        padding: 0 3rem;
     }
 
     .c-navbar__menu {
-        max-height: 100%;
+        display: flex;
+        position: static;
+        width: auto;
+        background: transparent;
+        border: none;
     }
-    
+
     .c-navbar__menu-list {
         flex-direction: row;
-        gap: 2rem;
+        gap: 0.25rem;
         padding: 0;
+        align-items: center;
     }
 
     .c-navbar__menu-item {
-        padding: 0;
+        width: auto;
     }
 
     .c-navbar__toggle {
@@ -150,8 +204,6 @@
     }
 
     .c-navbar__menu-cta {
-        flex:auto;
-        text-align: right;
+        margin-left: 0.5rem;
     }
-
 }

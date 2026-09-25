@@ -1,11 +1,36 @@
-{% assign title = include.title | default: page.title %}
+﻿{% assign title    = include.title    | default: page.title %}
 {% assign subtitle = include.subtitle | default: "" %}
-{% assign theme = include.theme | default: "default" %}
-{% assign mode = include.mode | default: "min" %}
+{% assign eyebrow  = include.eyebrow  | default: page.eyebrow | default: "" %}
+{% assign theme    = include.theme    | default: "default" %}
+{% assign mode     = include.mode     | default: "min" %}
+{% assign btn_primary_label   = include.btn_primary_label   | default: "" %}
+{% assign btn_primary_url     = include.btn_primary_url     | default: "" %}
+{% assign btn_secondary_label = include.btn_secondary_label | default: "" %}
+{% assign btn_secondary_url   = include.btn_secondary_url   | default: "" %}
 
-<div class="p-2 pb-6 u-theme-primary--{{ theme }}">
-    <h1 class="c-hero__title--{{ mode }}">{{ title }}</h1>
-    {% if subtitle != "" %}
-        <p role="doc-subtitle" class="c-hero__subtitle--{{ mode }}">{{ subtitle }}</p>
-    {% endif %}
+<div class="c-hero u-theme-primary--{{ theme }}">
+    <div class="c-hero__inner o-container--content">
+
+        {% if eyebrow != "" %}
+            <span class="c-hero__eyebrow">{{ eyebrow }}</span>
+        {% endif %}
+
+        <h1 class="c-hero__title--{{ mode }}">{{ title }}</h1>
+
+        {% if subtitle != "" %}
+            <p class="c-hero__subtitle--{{ mode }}">{{ subtitle }}</p>
+        {% endif %}
+
+        {% if btn_primary_label != "" or btn_secondary_label != "" %}
+            <div class="c-hero__actions">
+                {% if btn_primary_label != "" %}
+                    <a href="{{ btn_primary_url | relative_url }}" class="c-hero__btn-primary">{{ btn_primary_label }}</a>
+                {% endif %}
+                {% if btn_secondary_label != "" %}
+                    <a href="{{ btn_secondary_url }}" class="c-hero__btn-secondary" target="_blank" rel="noopener">{{ btn_secondary_label }}</a>
+                {% endif %}
+            </div>
+        {% endif %}
+
+    </div>
 </div>

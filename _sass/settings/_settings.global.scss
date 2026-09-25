@@ -1,99 +1,115 @@
+/* ==========================================================================
+   SETTINGS: GLOBAL
+   Updated to match redesigned brand - teal/coral palette, Source Serif 4 + DM Sans
+   ========================================================================== */
 
-$font-family: 'Montserrat', sans-serif;
+/* Fonts */
+$font-family-serif: 'Source Serif 4', Georgia, serif;
+$font-family-sans:  'DM Sans', system-ui, sans-serif;
+$font-family: $font-family-sans;
 $font-size: 1rem;
-$font-sizes: (
-    "": (
-        "p": 1rem
-    ),
-    "medium": (
-        "p": 2rem
-    ),
-    "large": (
-        "p": 3rem
-    )
-);
 
+/* Colour palette */
 $colors: (
-    "red": #e85a62,
-    "blue": #3259b7,
-    "orange": #eb823c,
-    "green": #428d52,
-    "pink": #b92383,
-    "black": #222,
-    "white": #fff
+    "teal":        #2a7f6f,
+    "teal-dark":   #1f6057,
+    "teal-light":  #eaf4f1,
+    "coral":       #d94f3d,
+    "coral-dark":  #b8392a,
+    "coral-light": #fdf1ef,
+    "coral-mid":   #f0a99f,
+    "navy":        #1a2640,
+    "slate":       #4a5568,
+    "silver":      #8898aa,
+    "rule":        #dde3ec,
+    "rule-warm":   #e8ddd7,
+    "off-white":   #f7f5f2,
+    "warm-white":  #faf9f7,
+    "white":       #ffffff,
+    "amber":       #c07c2a,
+    "amber-light": #fdf6ea,
+    "green":       #2d6a4f,
+    "green-light": #eaf3ee,
 );
 
+/* Page themes - now using teal/coral alternating pattern */
 $themes: (
+    /* Home: teal hero */
     "default": (
-        primary: #e85a62,
-        onPrimary: #ffffff,
-        secondary: #333333,
-        onSecondary: #ffffff,
-        background: #ffffff,
-        onBackground: #000000,
-        surface: #000000,
-        onSurface: #ffffff
+        primary:      #2a7f6f,
+        onPrimary:    #ffffff,
+        secondary:    #1a2640,
+        onSecondary:  #ffffff,
+        background:   #faf9f7,
+        onBackground: #1a2640,
+        surface:      #1a2640,
+        onSurface:    #ffffff
     ),
+    /* Features: coral header */
     "features": (
-        primary: #fa6f50,
-        onPrimary: #ffffff,
-        secondary: #333333,
-        onSecondary: #ffffff,
-        background: #ffffff,
-        onBackground: #000000,
-        surface: #000000,
-        onSurface: #ffffff
+        primary:      #d94f3d,
+        onPrimary:    #ffffff,
+        secondary:    #1a2640,
+        onSecondary:  #ffffff,
+        background:   #faf9f7,
+        onBackground: #1a2640,
+        surface:      #1a2640,
+        onSurface:    #ffffff
     ),
+    /* Backlog: teal header */
     "backlog": (
-        primary: #b92383,
-        onPrimary: #ffffff,
-        secondary: #333333,
-        onSecondary: #ffffff,
-        background: #ffffff,
-        onBackground: #000000,
-        surface: #000000,
-        onSurface: #ffffff
+        primary:      #2a7f6f,
+        onPrimary:    #ffffff,
+        secondary:    #1a2640,
+        onSecondary:  #ffffff,
+        background:   #faf9f7,
+        onBackground: #1a2640,
+        surface:      #1a2640,
+        onSurface:    #ffffff
     ),
+    /* Documentation: coral header */
     "documentation": (
-        primary: #467edd,
-        onPrimary: #ffffff,
-        secondary: #333333,
-        onSecondary: #ffffff,
-        background: #ffffff,
-        onBackground: #000000,
-        surface: #000000,
-        onSurface: #ffffff
+        primary:      #d94f3d,
+        onPrimary:    #ffffff,
+        secondary:    #1a2640,
+        onSecondary:  #ffffff,
+        background:   #faf9f7,
+        onBackground: #1a2640,
+        surface:      #1a2640,
+        onSurface:    #ffffff
     ),
+    /* Community: teal header */
     "community": (
-        primary: #428d52,
-        onPrimary: #ffffff,
-        secondary: #333333,
-        onSecondary: #ffffff,
-        background: #ffffff,
-        onBackground: #000000,
-        surface: #000000,
-        onSurface: #ffffff
+        primary:      #2a7f6f,
+        onPrimary:    #ffffff,
+        secondary:    #1a2640,
+        onSecondary:  #ffffff,
+        background:   #faf9f7,
+        onBackground: #1a2640,
+        surface:      #1a2640,
+        onSurface:    #ffffff
     ),
+    /* Contacts: coral header */
     "contacts": (
-        primary: #7d47e7,
-        onPrimary: #ffffff,
-        secondary: #333333,
-        onSecondary: #ffffff,
-        background: #ffffff,
-        onBackground: #000000,
-        surface: #000000,
-        onSurface: #ffffff
+        primary:      #d94f3d,
+        onPrimary:    #ffffff,
+        secondary:    #1a2640,
+        onSecondary:  #ffffff,
+        background:   #faf9f7,
+        onBackground: #1a2640,
+        surface:      #1a2640,
+        onSurface:    #ffffff
     )
 );
 
 $breakpoints: (
-    "": 0px,
-    "medium": 641px,
-    "large": 1008px,
+    "":         0px,
+    "medium":   641px,
+    "large":    1008px,
     "gigantic": 1367px
 );
 
 $containers: (
-    "": calc(100vw - (100vw - 100%)),
-    "content": 1100px
+    "":        calc(100vw - (100vw - 100%)),
+    "content": 1060px
 );

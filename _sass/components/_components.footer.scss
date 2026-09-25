@@ -1,0 +1,16 @@
+﻿.c-footer { background: #1a2640; padding: 3rem 2rem 0; }
+.c-footer__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 2.5rem; padding-bottom: 3rem; }
+.c-footer__brand-name { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; font-family: $font-family-serif; font-weight: 600; font-size: 1rem; color: rgba(255,255,255,0.85); margin-bottom: 0.75rem; }
+.c-footer__brand p { font-size: 0.8rem; color: rgba(255,255,255,0.55); max-width: 220px; line-height: 1.7; margin-bottom: 0; }
+.c-footer__col h4 { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.99); font-weight: 700; margin: 0 0 0.75rem 0; }
+.c-footer__col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+.c-footer__col ul li a { font-size: 0.825rem; color: rgba(255,255,255,0.75); text-decoration: none; }
+.c-footer__col ul li a:hover { color: rgba(255,255,255,0.9); }
+.c-footer__bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 1rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+.c-footer__bottom p { font-size: 0.7rem; color: rgba(255,255,255,0.2); max-width: none; margin: 0; }
+.c-footer__bottom a { color: rgba(255,255,255,0.3); text-decoration: none; }
+.c-footer__bottom a:hover { color: rgba(255,255,255,0.7); }
+@media screen and (min-width: map-get($breakpoints, "large")) {
+    .c-footer { padding: 3rem 3rem 0; }
+    .c-footer__grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+}

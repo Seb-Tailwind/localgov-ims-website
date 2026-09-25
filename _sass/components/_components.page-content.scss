@@ -1,0 +1,357 @@
+/* ==========================================================================
+   COMPONENT: PAGE CONTENT
+   ========================================================================== */
+
+/* ── Page wrapper ── */
+.c-page { padding: 4rem 2rem; }
+.c-page__section { margin-bottom: 4rem; }
+
+/* ── Eyebrow ── */
+.c-eyebrow {
+    font-family: $font-family-sans;
+    font-size: 1rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: map-get($colors, "coral");
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.c-eyebrow--teal { color: map-get($colors, "teal"); }
+
+/* ── Section intro ── */
+.c-section-intro {
+    font-size: 1.1rem;
+    color: map-get($colors, "slate");
+    max-width: 620px;
+    line-height: 1.8;
+    margin-bottom: 2.25rem;
+}
+
+/* ── Grids ── */
+.c-two-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+.c-three-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+    margin: 1.5rem 0;
+}
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+    .c-three-col { grid-template-columns: 1fr 1fr; }
+}
+@media screen and (min-width: map-get($breakpoints, "large")) {
+    .c-two-col { grid-template-columns: 1fr 1fr; }
+    .c-three-col { grid-template-columns: 1fr 1fr 1fr; }
+    .c-page { padding: 5rem 4rem; }
+}
+
+/* ── Base card shared styles ── */
+.c-card,
+.c-feature-card,
+.c-partner-card,
+.c-contact-card {
+    background: map-get($colors, "white");
+    border: 1px solid map-get($colors, "rule");
+    border-radius: 8px;
+    padding: 2.25rem 2.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ── Card ── */
+.c-card__label {
+    font-family: $font-family-sans;
+    font-size: 0.975rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: map-get($colors, "coral");
+    font-weight: 700;
+    margin-bottom: 0.875rem;
+}
+.c-card ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+.c-card ul li {
+    font-size: 1rem;
+    color: map-get($colors, "slate");
+    line-height: 1.75;
+    padding-left: 1rem;
+    position: relative;
+}
+.c-card ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: map-get($colors, "coral");
+    font-weight: 700;
+}
+
+/* ── Feature card ── */
+.c-feature-card { transition: border-color 0.2s; }
+.c-feature-card:hover { border-color: map-get($colors, "coral-mid"); }
+.c-feature-card__dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: map-get($colors, "coral");
+    margin-bottom: 0.75rem;
+}
+.c-feature-card h3 {
+    font-family: $font-family-sans;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: map-get($colors, "navy");
+    margin: 0 0 0.375rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+.c-feature-card p {
+    font-size: 1rem;
+    color: map-get($colors, "slate");
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+/* ── Partner card ── */
+.c-partner-card--dashed {
+    border-style: dashed;
+    background: map-get($colors, "off-white");
+}
+.c-partner-card__role {
+    font-family: $font-family-sans;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: map-get($colors, "coral");
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+.c-partner-card__name {
+    font-family: $font-family-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: map-get($colors, "navy");
+    margin-bottom: 0.3rem;
+}
+.c-partner-card p {
+    font-size: 1rem;
+    color: map-get($colors, "slate");
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+/* ── Contact card ── */
+.c-contact-card h3 {
+    font-family: $font-family-sans;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: map-get($colors, "navy");
+    margin: 0 0 0.5rem 0;
+}
+.c-contact-card p {
+    font-size: 1rem;
+    margin-bottom: 0.875rem;
+    line-height: 1.75;
+}
+.c-contact-card__btn {
+    display: inline-block;
+    background: map-get($colors, "coral");
+    color: map-get($colors, "white");
+    text-decoration: none;
+    font-family: $font-family-sans;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.55rem 1.25rem;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+.c-contact-card__btn:hover { background: map-get($colors, "coral-dark"); color: map-get($colors, "white"); }
+.c-contact-card__btn--outline {
+    background: transparent;
+    color: map-get($colors, "coral");
+    border: 1px solid map-get($colors, "coral-mid");
+}
+.c-contact-card__btn--outline:hover { background: map-get($colors, "coral-light"); color: map-get($colors, "coral"); }
+
+/* ── Card icon + button (demo block) ── */
+.c-card__icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+    flex-shrink: 0;
+}
+.c-card__icon--coral { background: map-get($colors, "coral-light"); border: 1px solid map-get($colors, "coral-mid"); }
+.c-card__icon--teal  { background: map-get($colors, "teal-light");  border: 1px solid #9fd4c8; }
+.c-card__btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: map-get($colors, "coral");
+    color: map-get($colors, "white");
+    text-decoration: none;
+    font-weight: 700; font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    transition: background 0.15s;
+}
+.c-card__btn:hover { background: map-get($colors, "coral-dark"); color: map-get($colors, "white"); }
+.c-card__btn--teal { background: map-get($colors, "teal"); }
+.c-card__btn--teal:hover { background: map-get($colors, "teal-dark"); }
+
+/* ── Callout boxes ── */
+.c-callout {
+    border-radius: 8px;
+    padding: 2rem 2.25rem;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.c-callout__label {
+    font-family: $font-family-sans;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+.c-callout p { font-size: 1.05rem; margin-bottom: 0; line-height: 1.8; }
+.c-callout--teal  { background: map-get($colors, "teal-light");  border-left: 3px solid map-get($colors, "teal"); }
+.c-callout--teal  .c-callout__label { color: map-get($colors, "teal"); }
+.c-callout--teal  p { color: #1a4a3f; }
+.c-callout--coral { background: map-get($colors, "coral-light"); border-left: 3px solid map-get($colors, "coral"); }
+.c-callout--coral .c-callout__label { color: map-get($colors, "coral-dark"); }
+.c-callout--coral p { color: #6b2219; }
+.c-callout--amber { background: map-get($colors, "amber-light"); border-left: 3px solid map-get($colors, "amber"); }
+.c-callout--amber .c-callout__label { color: map-get($colors, "amber"); }
+.c-callout--amber p { color: #5c3d10; }
+.c-callout--green { background: map-get($colors, "green-light"); border-left: 3px solid map-get($colors, "green"); }
+.c-callout--green .c-callout__label { color: map-get($colors, "green"); }
+.c-callout--green p { color: #1a3d2a; }
+
+/* ── Steps ── */
+.c-steps { display: flex; flex-direction: column; gap: 0; margin: 1.5rem 0; }
+.c-step {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 1.125rem;
+    position: relative;
+    padding-bottom: 1.75rem;
+}
+.c-step:last-child { padding-bottom: 0; }
+.c-step::before {
+    content: '';
+    position: absolute;
+    left: 15px; top: 36px; bottom: 0;
+    width: 2px;
+    background: map-get($colors, "rule-warm");
+}
+.c-step:last-child::before { display: none; }
+.c-step__num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: map-get($colors, "coral");
+    color: map-get($colors, "white");
+    display: flex; align-items: center; justify-content: center;
+    font-family: $font-family-sans;
+    font-size: 0.8rem; font-weight: 700;
+    flex-shrink: 0;
+    position: relative; z-index: 1;
+    margin-top: 0.25rem;
+}
+.c-step__body h3 {
+    font-family: $font-family-sans;
+    font-size: 1.05rem; font-weight: 700;
+    color: map-get($colors, "navy");
+    margin: 0.25rem 0 0.3rem 0;
+    line-height: 1.3;
+}
+.c-step__body p { font-size: 1rem; margin-bottom: 0; line-height: 1.8; }
+
+/* ── Provider box ── */
+.c-provider-box {
+    background: map-get($colors, "navy");
+    border-radius: 10px;
+    padding: 3.25rem 3.5rem;
+    display: flex; flex-direction: column;
+    gap: 1.5rem;
+    margin: 2.25rem 0;
+}
+.c-provider-box h3 {
+    font-family: $font-family-serif;
+    font-size: 1.5rem; font-weight: 600;
+    color: map-get($colors, "white");
+    margin: 0 0 0.5rem 0;
+    line-height: 1.25;
+}
+.c-provider-box p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.05rem;
+    margin-bottom: 0; line-height: 1.75;
+}
+.c-provider-box__btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: map-get($colors, "coral");
+    color: map-get($colors, "white");
+    text-decoration: none;
+    font-family: $font-family-sans;
+    font-weight: 700; font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    white-space: nowrap; align-self: flex-start;
+    transition: background 0.15s;
+}
+.c-provider-box__btn:hover { background: map-get($colors, "coral-dark"); color: map-get($colors, "white"); }
+@media screen and (min-width: map-get($breakpoints, "large")) {
+    .c-provider-box { flex-direction: row; align-items: center; justify-content: space-between; }
+    .c-provider-box__text { flex: 1; }
+    .c-provider-box__btn { align-self: center; flex-shrink: 0; }
+}
+
+/* ── Governance box ── */
+.c-governance-box {
+    background: map-get($colors, "off-white");
+    border: 1px solid map-get($colors, "rule-warm");
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+    margin: 1.5rem 0;
+}
+.c-governance-box h3 {
+    font-family: $font-family-serif;
+    font-size: 1.15rem; font-weight: 600;
+    color: map-get($colors, "navy");
+    margin: 0 0 0.5rem 0;
+}
+.c-governance-box p { font-size: 1rem; margin-bottom: 0; line-height: 1.8; }
+
+/* ── Article content ── */
+.c-article { padding: 2rem 0; }
+.c-article h2 { margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid map-get($colors, "rule-warm"); }
+.c-article h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.c-article ul {
+    list-style: none;
+    margin: 0.75rem 0 1.25rem 0; padding: 0;
+    display: flex; flex-direction: column; gap: 0.4rem;
+}
+.c-article ul li {
+    font-size: 1rem;
+    color: map-get($colors, "slate");
+    line-height: 1.75;
+    padding-left: 1rem;
+    position: relative;
+}
+.c-article ul li::before {
+    content: '–';
+    position: absolute; left: 0;
+    color: map-get($colors, "coral"); font-weight: 700;
+}

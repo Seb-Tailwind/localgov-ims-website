@@ -1,73 +1,31 @@
 /* Import external fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
 
 /* Settings */
 @import 'settings/settings.global';
 
-
-
-
-
 /* Tools */
 @import "tools/tools.map-deep-get";
-//@import "tools/tools.font-size";
-//@import "tools/tools.clearfix";
-//@import "tools/tools.hidden";
-
-
-
-
 
 /* Generic */
 @import "generic/generic.box-sizing";
 @import "generic/generic.normalize";
 @import "generic/generic.reset";
-//@import "generic/generic.shared";
-
-
-
-
 
 /* Elements */
 @import "elements/elements.page";
 @import "elements/elements.headings";
 @import "elements/elements.lists";
-//@import "elements/elements.tables";
-
-
-
-
 
 /* Objects */
 @import "objects/objects.container";
-//@import "objects/objects.layout";
-//@import "objects/objects.media";
-//@import "objects/objects.flag";
-//@import "objects/objects.list-bare";
-//@import "objects/objects.list-inline";
-//@import "objects/objects.box";
-//@import "objects/objects.block";
-//@import "objects/objects.ratio";
-//@import "objects/objects.crop";
-//@import "objects/objects.table";
-//@import "objects/objects.pack";
-
-
-
-
 
 /* Components */
 @import 'components/components.navbar';
 @import 'components/components.hero';
 @import 'components/components.image';
-
-
-
-
+@import 'components/components.page-content';
+@import 'components/components.footer';
 
 /* Utilities */
 @import 'utilities/utilities.alignment';
@@ -77,4 +35,3 @@
 @import 'utilities/utilities.spacing';
 @import 'utilities/utilities.visibility';
 @import 'utilities/utilities.widths';
-//@import "utilities/utilities.clearfix";

@@ -4,36 +4,48 @@
 <nav class="c-navbar">
 
     <!-- Brand -->
-    <a class="c-navbar__brand u-theme-primary--{{ theme }}" href="{{ '/index.html' | relative_url }}">Local Gov IMS</a>
-    
-    <!-- Menu toggle -->
+    <a class="c-navbar__brand" href="{{ '/index.html' | relative_url }}">
+        <div class="c-navbar__brand-mark">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="1" y="1" width="6" height="6" rx="1" fill="white"/>
+                <rect x="9" y="1" width="6" height="6" rx="1" fill="white" opacity="0.6"/>
+                <rect x="1" y="9" width="6" height="6" rx="1" fill="white" opacity="0.6"/>
+                <rect x="9" y="9" width="6" height="6" rx="1" fill="white" opacity="0.3"/>
+            </svg>
+        </div>
+        <span class="c-navbar__brand-text">
+            <strong>Local</strong>Gov <strong>IMS</strong>
+        </span>
+    </a>
+
+    <!-- Mobile menu toggle -->
     <input class="c-navbar__checkbox" type="checkbox" id="navbarCheckbox">
-    <label class="c-navbar__toggle clearfix" for="navbarCheckbox">
+    <label class="c-navbar__toggle" for="navbarCheckbox">
         <span class="hidden">Menu toggle</span>
-        <span class="c-navbar__hamburger c-navbar__hamburger-bun u-theme-primary--{{ theme }}-inverse"></span>
-        <span class="c-navbar__hamburger c-navbar__hamburger-meat u-theme-primary--{{ theme }}-inverse"></span>
+        <span class="c-navbar__hamburger c-navbar__hamburger-bun"></span>
+        <span class="c-navbar__hamburger c-navbar__hamburger-meat"></span>
     </label>
-    
+
     <!-- Menu -->
     <div class="c-navbar__menu">
         <ul class="c-navbar__menu-list">
 
             {% for indexPage in pagesList %}
-                
-                <li class="c-navbar__menu-item fs-90">
-                    <a class="c-navbar__menu-link u-theme-primary--{{ theme }}" href="{{ indexPage.url | relative_url }}">
+                <li class="c-navbar__menu-item">
+                    <a class="c-navbar__menu-link{% if page.url == indexPage.url %} c-navbar__menu-link--active{% endif %}"
+                       href="{{ indexPage.url | relative_url }}">
                         {{ indexPage.navTitle | default: indexPage.title }}
                     </a>
                 </li>
-            
             {% endfor %}
-            
-            <li class="c-navbar__menu-item c-navbar__menu-cta fs-90">
-                <a class="c-navbar__menu-button u-theme-primary--{{ theme }}-inverse" href="{{ '/demo' | relative_url }}">Demo site</a>
+
+            <li class="c-navbar__menu-item c-navbar__menu-cta">
+                <a class="c-navbar__menu-button" href="https://tailwinddigital.io" target="_blank" rel="noopener">
+                    Get the IMS →
+                </a>
             </li>
-            
+
         </ul>
     </div>
 
 </nav>
-

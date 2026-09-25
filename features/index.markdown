@@ -1,52 +1,70 @@
 ---
-layout: section    # See _layouts/section.html
-title: Features of the IMS
+layout: page
+title: Features of Local Gov IMS
+subtitle: Designed and built to meet the priority needs of councils managing income, payments, through to general ledger and reconciliation.
+eyebrow: System
 theme: features
 navEntry: 2
 navTitle: Features
 ---
 
-> The open source IMS has been designed and built as a minimum viable system, meeting priority needs of councils. Here we explain some of the current features of the system.
+<div class="c-callout c-callout--teal">
+    <div class="c-callout__label">Open source project</div>
+    <p>Local Gov IMS has been developed as an open source project by partner councils. The current codebase is available on <a href="https://github.com/LocalGovIMS/localgov-ims" target="_blank" rel="noopener">GitHub</a> — however, we plan to release an updated version once governance arrangements have been agreed with project partners and MHCLG.</p>
+</div>
 
-## Dashboard
+<div class="c-three-col" style="margin-top: 2rem;">
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>Dashboard</h3>
+        <p>Flexible, real time transaction data in an easy to use dashboard, view by fund, MOP codes and dig deeper into individual transactions.</p>
+    </div>
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>Transaction list &amp; search</h3>
+        <p>All payments shown in real-time as received. Multiple filtering options including wildcard narrative search — particularly useful for sort code or account number queries.</p>
+    </div>
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>Transaction details</h3>
+        <p>Full payment information with audit trail. Email and print receipts. Refunds, journals, and reallocation to correct fund and reference.</p>
+    </div>
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>Transfers</h3>
+        <p>Move money when it isn't linked to an incoming payment — for example, crediting a council tax account after an award of council tax support.</p>
+    </div>
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>Payments</h3>
+        <p>Real time payments across MOPs including online, MOTO, cheque, in person via cash, card or cheque and integrated payments from bank file, DWP files and more.</p>
+    </div>
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>eReturns</h3>
+        <p>Configured using templates to record cashing up with cash, PDQ and cheque. Flexible enough to match your council's existing processes.</p>
+    </div>
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>Accounts</h3>
+        <p>Account reference validation, with flexible account holder imports, ensuring payments are allocated correctly across council accounts.</p>
+    </div>
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>Suspense</h3>
+        <p>Unallocated bank file entries fall into suspense. Add notes to track progress. Import processing rules reduce suspense volumes automatically.</p>
+    </div>
+    <div class="c-feature-card">
+        <div class="c-feature-card__dot"></div>
+        <h3>Configurable settings</h3>
+        <p>Fund codes, VAT codes, and methods of payment are all configurable within the system to match your council's requirements.</p>
+    </div>
+</div>
 
-This is the landing page once logged in. The dashboard shows widgets which provide a summary of what’s happening in the system. Currently there are widgets for import processing.  
- 
-## Transaction list - search page 
-
-All payments are shown in real-time, as soon as they have been received. Payments can be searched for, when dealing with a query from a customer, and there are multiple filtering options. The narrative search option, which may contain information such as a payee sort code or account number, has proved particularly useful to IMS users at Barnsley.  
- 
-## Transaction details 
-Payment information is provided, and with a full audit trail. There is functionality to email and print receipts. Payments can be refunded and journalled. Where needed payments can be reallocated, to a correct fund and reference. 
- 
-## Transfers
-
-Transfers permit money to be moved, when it isn’t linked to a payment coming into the system. For example, a customer's council tax account might be in credit after an award of council tax support. 
- 
-## Payments 
-
-A call centre or post room can take card payments and record cheques that have been received. When clicking ‘pay’ a member of staff is guided through the payment process. This can be used for return direct debits, direct debit indemnity claims and returned cheques. Multiple items can be processed. The feature integrates with call management software.
-    
-## eReturns
-
-eReturns are configured using templates and used to record cashing up with cash and cheque. 
-      
-## Accounts
-
-Primarily used to validate account references.
-      
-## Suspense
-
-When a bank file is imported most entries will be allocated automatically, any item not allocated falls into suspense. You can add notes to show any progress that's been made whilst working on a suspense item. 
- 
-## Imports
-
-A breakdown of all file imports into the IMS are shown. Transactions created can be viewed. Import reversals are on the IMS product backlog. 
- 
-## Import processing rules
-
-Allows a user to define rules and actions to perform on imported transactions, which reduces the amount of items going into suspense.
-      
-## Configurable settings
-
-It’s possible to set-up configurable data within the system, such as fund codes, VAT codes and methods of payments.
+<div class="c-provider-box" style="margin-top: 2.5rem;">
+    <div class="c-provider-box__text">
+        <h3>Want to adopt Local Gov IMS without the complexity?</h3>
+        <p>Tailwind Digital delivers Local Gov IMS as a fully managed service including full implementation, hosting, payment integrations, and support all included.</p>
+    </div>
+    <a href="https://tailwinddigital.io" target="_blank" rel="noopener" class="c-provider-box__btn">Learn more ↗</a>
+</div>
